@@ -36,11 +36,7 @@ class RandomStringViewModel @Inject constructor(
 
     // Observe all stored random strings
     val randomStrings = repository.getAllStrings()
-        .stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.Lazily,
-            initialValue = emptyList()
-        )
+        .stateIn(viewModelScope, SharingStarted.Lazily, emptyList())
 
     /**
      * Generates a new random string with the specified length

@@ -65,13 +65,13 @@ class RandomStringRepository @Inject constructor(
                     val jsonIndex = it.getColumnIndex(DATA_COLUMN)
                     if (jsonIndex != -1) {
                         val jsonString = it.getString(jsonIndex)
-                        Log.d(TAG, "Received JSON: $jsonString")
+                        //Log.d(TAG, "Received JSON: $jsonString")
 
                         // Parse the JSON response
                         val response = try {
                             gson.fromJson(jsonString, RandomTextResponse::class.java)
                         } catch (e: JsonSyntaxException) {
-                            Log.e(TAG, "Failed to parse response: $e")
+                            //Log.e(TAG, "Failed to parse response: $e")
                             null
                         }
 
@@ -95,7 +95,7 @@ class RandomStringRepository @Inject constructor(
 
             Result.failure(Exception("No data returned from content provider"))
         } catch (e: Exception) {
-            Log.e(TAG, "Error generating random string", e)
+            //Log.e(TAG, "Error generating random string", e)
             Result.failure(e)
         }
     }

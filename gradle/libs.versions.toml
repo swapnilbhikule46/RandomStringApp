@@ -40,13 +40,15 @@ coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-androi
 
 gson = { module = "com.google.code.gson:gson", version = "2.10.1" }
 
-#moshi = { module = "com.squareup.moshi:moshi", version.ref = "moshi" }
-#moshi-kotlin = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
-#moshi-kotlin-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
-
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+mockito-core = { module = "org.mockito:mockito-core", version = "5.0.0" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version = "5.0.0" }
+androidx-core-testing = { module = "androidx.arch.core:core-testing", version = "2.2.0" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version = "1.7.1" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
